@@ -26,7 +26,11 @@ public class Element {
 	}
 
 	@Override
-	public equals() {
-		
+	public boolean equals(Object obj) {
+		if (!(obj instanceof Element)) {
+			return false;
+		}
+		return ((Element) obj).getNom().equals(this.nom);
 	}
+
 }

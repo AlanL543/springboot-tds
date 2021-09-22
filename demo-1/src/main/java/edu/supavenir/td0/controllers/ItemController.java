@@ -28,9 +28,11 @@ public class ItemController {
 
 	@GetMapping("/testAdd")
 	public RedirectView add(@SessionAttribute List<Element> items) {
-		Element elm = new Element();
+		Element elm = new Element("bop", 25);
 		elm.setNom("bop");
-		items().add(elm);
+		if (!items.contains(elm)) {
+		}
+		items.add(elm);
 		return new RedirectView("/td0/items");
 	}
 }

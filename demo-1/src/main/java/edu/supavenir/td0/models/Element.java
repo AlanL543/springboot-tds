@@ -20,9 +20,8 @@ public class Element {
 		this.evaluation = evaluation;
 	}
 
-	public Element(String nom, int evaluation) {
+	public Element(String nom) {
 		this.nom = nom;
-		this.evaluation = evaluation;
 	}
 
 	@Override
@@ -33,4 +32,12 @@ public class Element {
 		return ((Element) obj).getNom().equals(this.nom);
 	}
 
+	@Override
+	public String toString() {
+		return "Element [nom=" + nom + "]";
+	}
+
+	public Element(String nom) {
+		this.nom = nom;
+	}
 }

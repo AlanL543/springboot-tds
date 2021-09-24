@@ -1,8 +1,24 @@
 {{> /inc/header}}
-<h1>Eléments</h1>
+<h1>Éléments</h1>
+<a class="ui button" href="/items/new">Ajouter un élément</a>
+<meta charset="utf-8">
 <ul>
 {{#items}}
-	<li>{{nom}}</li>
+	<li>{{nom}}
+		<a href="items/inc/{{nom}}"><i class="ui angle up green icon"></i></a>
+		<a href="items/dec/{{nom}}"><i class="ui angle down red icon"></i></a>
+	</li>
 {{/items}}
 </ul>
+{{#msg}}
+<div class="ui icon {{type}} message">
+	<i class="{{icon}} icon"></i>
+		<div class="content">
+			<div class="header">
+				Ajout d'élément
+			</div>
+		<p>{{{content}}}
+	</div>
+</div>
+{{/msg}}
 {{> /inc/Footer}}
